@@ -33,7 +33,7 @@ Instructor: Washington Valencia
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/x-icon"
 		href="https://canvascctb.s3.ca-central-1.amazonaws.com/account_1/attachments/95/CCTB_favicon.ico" />
-
+<script src="script.js" defer></script>
 
 </head>
 
@@ -149,7 +149,7 @@ Instructor: Washington Valencia
 
 									<a class="nav-link" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
 										aria-expanded="false" id="mainNavHosting">
-										<h3>Quiz #2 - IST 107 - <span class="text-danger">{{Replace with your Full
+										<h3>Quiz #2 - IST 107 - <span id="full-name" class="text-danger">{{Replace with your Full
 												Name}}</span>
 										</h3>
 									</a>
@@ -177,7 +177,7 @@ Instructor: Washington Valencia
 									<i class="fi fi-users m-0-xs"></i>
 
 									<!-- hide text on mobile, keep the icon (space issue reason) -->
-									<span class="d-none d-lg-inline-block">Change my name</span>
+									<span id="change-name-btn" class="d-none d-lg-inline-block">Change my name</span>
 								</a>
 							</li>
 
@@ -221,8 +221,8 @@ Instructor: Washington Valencia
 							</p><br><br>
 
 							<div class="mt-15 text-muted">
-								<h2>{{Replace with current date}} </h2>
-								<h2>{{Replace with your email}} </h2>
+								<h2 id="current-date">{{Replace with current date}} </h2>
+								<h2 id="your-email">{{Replace with your email}} </h2>
 							</div>
 
 						</div>
@@ -259,7 +259,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-primary fw-bold">HTTP</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / Layer 7</p>
+					<p class="m-0">80 port / Layer 7</p>
 
 				</div>
 
@@ -269,7 +269,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-danger fw-bold">HTTPS</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / Layer 7</p>
+					<p class="m-0">443 port / Layer 7</p>
 
 				</div>
 
@@ -279,7 +279,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-warning fw-bold">SSH</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / layer 7</p>
+					<p class="m-0">22 port / layer 7</p>
 
 				</div>
 
@@ -289,7 +289,7 @@ Instructor: Washington Valencia
 					<h2 class="h5 mb-1">
 						<span class="text-success fw-bold">DNS</span> <span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / layer 7</p>
+					<p class="m-0">53 port / layer 7</p>
 
 				</div>
 
@@ -436,79 +436,12 @@ Instructor: Washington Valencia
 							List of <span class="text-primary fw-medium">Items</span>
 						</h2>
 
-
-						<div class="d-flex mb-4">
-
-							<!-- icon -->
-							<div class="text-primary">
-								<img width="40" height="20" src="demo.files/svg/various/line-chart.svg" alt="...">
-							</div>
-
-							<div class="mx-2">
-
-								<!-- heading -->
-								<h3 class="h5 fw-bold mb-1">
-									Item #1
-								</h3>
-
-								<!-- text -->
-								<p>
-									This is item #1.
-								</p>
-
-							</div>
-
-						</div>
-
-
-						<div class="d-flex mb-4">
-
-							<!-- icon -->
-							<div class="text-primary">
-								<img width="40" height="20" src="demo.files/svg/various/line-chart.svg" alt="...">
-							</div>
-
-							<div class="mx-2">
-
-								<!-- heading -->
-								<h3 class="h5 fw-bold mb-1">
-									Item #2
-								</h3>
-
-								<!-- text -->
-								<p>
-									This is item #2.
-								</p>
-
-							</div>
-
-						</div>
-
-						<div class="d-flex mb-4">
-
-							<!-- icon -->
-							<div class="text-primary">
-								<img width="40" height="20" src="demo.files/svg/various/line-chart.svg" alt="...">
-							</div>
-
-							<div class="mx-2">
-
-								<!-- heading -->
-								<h3 class="h5 fw-bold mb-1">
-									Item #3
-								</h3>
-
-								<!-- text -->
-								<p>
-									This is item #3.
-								</p>
-
-							</div>
-
-						</div>
+						<div id="list-wrapper"></div>
+						
+						
 
 						<div class="text-align-end">
-							<a href="#" class="btn btn-primary btn-soft">How many items would you like in
+							<a href="#" class="btn btn-primary btn-soft" id="list-btn">How many items would you like in
 								the list?</a>
 						</div>
 
